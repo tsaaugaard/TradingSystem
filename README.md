@@ -16,10 +16,10 @@ defined by the Genium Inet Protocols and Market Models.
 
 <B>Repositories</B> contains repositories for CRUD operation of the objects
 
-TraderClientTelerikWPF is the client project in iteration 1:
-shows yield and price depending on which ordertype and instrument is choosen
-- OrderType market shows no price or yield
-- Intrument whichs are traded on yield shows yield - instruments traded on price shows price
+<B>TraderClientTelerikWPF</B> is the client project which in iteration 1 is able to....:
+- shows yield and price depending on which ordertype and instrument is choosen
+- - OrderType market shows no price or yield
+- - Intrument whichs are traded on yield shows yield - instruments traded on price shows price
 
 
 Dependencies : Telerik WPF Controls
@@ -42,3 +42,4 @@ Hopefully it shows that I (as a full stack developer) can...
 - - Automated Integration Test
 - - WPF
 - - Web development (ASP.NET HTML5 JavaScript)
+- - OOAD
