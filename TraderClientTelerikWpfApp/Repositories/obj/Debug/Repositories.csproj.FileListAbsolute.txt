@@ -1,0 +1,7 @@
+C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\Repositories\obj\Debug\Repositories.csprojResolveAssemblyReference.cache
+C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\Repositories\bin\Debug\Repositories.dll
+C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\Repositories\bin\Debug\Repositories.pdb
+C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\Repositories\bin\Debug\Model.dll
+C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\Repositories\bin\Debug\Model.pdb
+C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\Repositories\obj\Debug\Repositories.dll
+C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\Repositories\obj\Debug\Repositories.pdb

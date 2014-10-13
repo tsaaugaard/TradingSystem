@@ -1,0 +1,4 @@
+C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\Model\bin\Debug\Model.dll
+C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\Model\bin\Debug\Model.pdb
+C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\Model\obj\Debug\Model.dll
+C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\Model\obj\Debug\Model.pdb

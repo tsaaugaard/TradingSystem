@@ -1,0 +1,9 @@
+C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\FakeRepositories\bin\Debug\FakeRepositories.dll
+C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\FakeRepositories\bin\Debug\FakeRepositories.pdb
+C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\FakeRepositories\bin\Debug\Model.dll
+C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\FakeRepositories\bin\Debug\Repositories.dll
+C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\FakeRepositories\bin\Debug\Model.pdb
+C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\FakeRepositories\bin\Debug\Repositories.pdb
+C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\FakeRepositories\obj\Debug\FakeRepositories.csprojResolveAssemblyReference.cache
+C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\FakeRepositories\obj\Debug\FakeRepositories.dll
+C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\FakeRepositories\obj\Debug\FakeRepositories.pdb

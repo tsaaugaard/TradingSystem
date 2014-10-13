@@ -1,0 +1,102 @@
+using System;
+using System.Windows;
+using System.Windows.Controls;
+using TraderClientTelerikWpfApp.Model;
+using TraderClientTelerikWpfApp.OrderEntry.ViewModel;
+
+namespace TraderClientTelerikWpfApp.OrderEntry.View
+{
+    /// <summary>
+    ///     Interaction logic for OrderEntry.xaml
+    /// </summary>
+    public partial class OrderEntry : Window, IInstrumentChosenEvent, IOrderTypeChosenEvent
+    {
+        public OrderEntry()
+        {
+            InitializeComponent();
+            DataContext = new OrderEntryViewModel();
+        }
+
+        public event EventHandler<InstrumentChosenEventArgs> InstrumentChosen;
+        public event EventHandler<OrderTypeChosenEventArgs> OrderTypeChosen;
+
+        private void ButtonOK_Click(object sender, RoutedEventArgs e)
+        {
+            if (Validate())
+            {
+                // call business service for sending in order
+            }
+        }
+
+        /// <summary>
+        ///     the View has made a new instrument selection fire event to viewmodel
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void InstrumentPicker_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var instrument = InstrumentPicker.SelectedValue as Instrument;
+            if (instrument == null)
+                return;
+            OnInstrumentChoosen(new InstrumentChosenEventArgs() {Instrument = instrument});
+        }
+
+        private bool Validate()
+        {
+            return true;
+        }
+
+        /// <summary>
+        ///     Can be overridden if doing unittest.
+        /// </summary>
+        /// <param name="e"></param>
+        protected virtual void OnInstrumentChoosen(InstrumentChosenEventArgs e)
+        {
+            EventHandler<InstrumentChosenEventArgs> handler = InstrumentChosen;
+            if (handler != null)
+            {
+                handler(this, e);
+            }
+        }
+
+        protected virtual void OnOrderTypeChoosen(OrderTypeChosenEventArgs e)
+        {
+            EventHandler<OrderTypeChosenEventArgs> handler = OrderTypeChosen;
+            if (handler != null)
+            {
+                handler(this, e);
+            }
+        }
+
+        private void OrderTypesPicker_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var orderType = OrderTypesPicker.SelectedValue as OrderType;
+            if (orderType == null)
+                return;
+        }
+    }
+}
+namespace TraderClientTelerikWpfApp.OrderEntry.ViewModel
+{
+    public interface IInstrumentChosenEvent
+    {
+        event EventHandler<InstrumentChosenEventArgs> InstrumentChosen;
+    }
+    public class InstrumentChosenEventArgs : EventArgs
+    {
+        public Instrument Instrument { get; set; }
+    }
+
+    public interface IOrderTypeChosenEvent
+    {
+        event EventHandler<OrderTypeChosenEventArgs> OrderTypeChosen;
+    }
+    public class OrderTypeChosenEventArgs : EventArgs
+    {
+        public OrderType OrderType { get; set; }
+    }
+}
+
+
+                     "{Binding Source={StaticResource OrderEntryViewModel}, Path=Instruments}"
+                                ItemsS
