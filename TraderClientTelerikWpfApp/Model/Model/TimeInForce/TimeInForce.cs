@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace DomainModel.Model.TimeInForce
 {
@@ -9,6 +10,21 @@ namespace DomainModel.Model.TimeInForce
         public virtual string Name {
             get { return ""; } }
 
+
+        public static List<TimeInForce> PosibleTimeInForce 
+        {
+            get
+            {
+                List<TimeInForce> timeInForces = new List<TimeInForce>();
+                timeInForces.Add(new TimeInForceDay());
+                timeInForces.Add(new TimeInForceGTC());
+                timeInForces.Add(new TimeInForceGTD());
+                timeInForces.Add(new TimeInForceGTS());
+                timeInForces.Add(new TimeInForceIOC());
+
+                return timeInForces;
+            }
+        }
 
         public enum TimeINForceEnum
         {

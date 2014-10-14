@@ -238,7 +238,7 @@
 
                                 <telerik:RadComboBox Grid.Column="1"
                                 x:Name="OrderCapacityPicker"
-                                ItemsSource = "{Binding Path=Sessions}"
+                                ItemsSource = "{Binding Path=OrderCapacities}"
                                 ItemTemplate ="{StaticResource SimpleDropdownCustomTemplate}" SelectedItem="{Binding Path=ChosenOrderCapacity}"  HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Margin="10"/>
                             </Grid>
                             <Grid>
@@ -250,7 +250,7 @@
 
                                 <telerik:RadComboBox Grid.Column="1"
                                 x:Name="OrderRestrictionPicker"
-                                ItemsSource = "{Binding Path=Sessions}"
+                                ItemsSource = "{Binding Path=OrderRestrictions}"
                                 ItemTemplate ="{StaticResource SimpleDropdownCustomTemplate}" SelectedItem="{Binding Path=ChosenOrderRestriction}"  HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Margin="10"/>
                             </Grid>
                             <Grid>

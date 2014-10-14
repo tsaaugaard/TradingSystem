@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Instrument.cs" />
+    <Compile Include="Model\OrderCapacity\Capacity.cs" />
     <Compile Include="Model\OrderRequest.cs" />
     <Compile Include="Model\OrderType.cs" />
     <Compile Include="Model\TimeInForce\IHasExpireDate.cs" />

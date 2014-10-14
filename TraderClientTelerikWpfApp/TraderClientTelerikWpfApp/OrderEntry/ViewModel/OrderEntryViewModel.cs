@@ -2,37 +2,30 @@
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using DomainModel.Model;
+using DomainModel.Model.OrderCapacity;
 using DomainModel.Model.TimeInForce;
 using Repositories.Repositories;
 using TraderClientTelerikWpfApp.OrderEntry.ViewModel.Extensions;
-
 
 namespace TraderClientTelerikWpfApp.OrderEntry.ViewModel
 {
     public class OrderEntryViewModel : INotifyPropertyChanged
 
     {
+        private Instrument _chosenInstrument = Instrument.GetNullObject();
+        private OrderType _chosenOrderType = OrderType.GetNullObject();
         private ObservableCollection<Instrument> _instruments;
+        private IInstrumetRepository _instrumetRepository;
+        private bool _isYieldVisible;
         private ObservableCollection<OrderType> _orderTypes;
         private double _price;
         private bool _priceVisible;
-        private int _volume;
-        private bool _isYieldVisible;
-        private Instrument _chosenInstrument = Instrument.GetNullObject();
-        private OrderType _chosenOrderType = OrderType.GetNullObject();
-        private IInstrumetRepository _instrumetRepository;
-        private ObservableCollection<TimeInForce> _timeInForces;
         private TimeInForce _timeInForce;
+        private ObservableCollection<TimeInForce> _timeInForces;
         private ObservableCollection<TradingSession> _tradingSessions;
-
-        public OrderEntryViewModel()
-        {
-            
-        }
-        public void Init(IInstrumetRepository instrumetRepository)
-        {
-            _instrumetRepository = instrumetRepository;
-        }
+        private int _volume;
+        private ObservableCollection<OrderCapacity> _orderCapacities;
+        private OrderCapacity _orderCapacity;
 
         public ObservableCollection<Instrument> Instruments
         {
@@ -42,10 +35,9 @@ namespace TraderClientTelerikWpfApp.OrderEntry.ViewModel
                 {
                     _instruments = new ObservableCollection<Instrument>();
                     _instrumetRepository.GetAll();
-                    foreach (var instrument in _instrumetRepository.GetAll())
+                    foreach (Instrument instrument in _instrumetRepository.GetAll())
                     {
                         _instruments.Add(instrument);
-                        
                     }
                 }
 
@@ -75,11 +67,10 @@ namespace TraderClientTelerikWpfApp.OrderEntry.ViewModel
                 if (_timeInForces == null)
                 {
                     _timeInForces = new ObservableCollection<TimeInForce>();
-                    _timeInForces.Add(new TimeInForceDay());
-                    _timeInForces.Add(new TimeInForceGTC());
-                    _timeInForces.Add(new TimeInForceGTD());
-                    _timeInForces.Add(new TimeInForceGTS());
-                    _timeInForces.Add(new TimeInForceIOC());
+                    foreach (var timeInForce in TimeInForce.PosibleTimeInForce)
+                    {
+                        _timeInForces.Add(timeInForce);
+                    }
                 }
                 return _timeInForces;
             }
@@ -100,17 +91,63 @@ namespace TraderClientTelerikWpfApp.OrderEntry.ViewModel
             }
         }
 
+        public OrderRestriction ChosenOrderRestriction
+        {
+            set { _orderCapacity.OrderRestriction = value; }
+        }
+        public ObservableCollection<OrderRestriction> OrderRestrictions
+        {
+            get
+            {
+                ObservableCollection<OrderRestriction> restrictions = new ObservableCollection<OrderRestriction>();
+         
+                if (_orderCapacity == null)
+                    return restrictions;
+      
+                foreach (var restriction in _orderCapacity.PosibleRestrictions)
+                {
+                    restrictions.Add(restriction);
+                }
+                return restrictions;
+            }
+        }
+        public OrderCapacity ChosenOrderCapacity
+        {
+            set
+            {
+                _orderCapacity = value;
+                this.PropertyChanged.Notify(()=>this.OrderRestrictions);
+            }
+            
+        }
+
+        public ObservableCollection<OrderCapacity> OrderCapacities
+        {
+            get
+            {
+                if (_orderCapacities == null)
+                {
+                    _orderCapacities = new ObservableCollection<OrderCapacity>();
+                    _orderCapacities.Add(new OrderCapacityAgency());
+                    _orderCapacities.Add(new OrderCapacityPrincipal());
+                    _orderCapacities.Add(new OrderCapacityRisklessPrincipal());
+                }
+                return _orderCapacities;
+            }
+        }
+
+
         /// <summary>
-        /// property of chosen time in force - might change visibility of ExpireDate. (time in force has 0..1 expiredate) 
+        ///     property of chosen time in force - might change visibility of ExpireDate. (time in force has 0..1 expiredate)
         /// </summary>
         public TimeInForce ChosenTimeInForce
         {
             get { return _timeInForce; }
             set
             {
-                _timeInForce = value; 
-                this.PropertyChanged.Notify(()=> this.IsExpireDateVisible);
-                this.PropertyChanged.Notify(()=> this.IsTradingSessionVisible);
+                _timeInForce = value;
+                PropertyChanged.Notify(() => IsExpireDateVisible);
+                PropertyChanged.Notify(() => IsTradingSessionVisible);
             }
         }
 
@@ -146,23 +183,23 @@ namespace TraderClientTelerikWpfApp.OrderEntry.ViewModel
             }
         }
 
-        public TradingSession ChosenTradingSession 
+        public TradingSession ChosenTradingSession
         {
             set
             {
                 if (ChosenTimeInForce != null && ChosenTimeInForce is IHasTradingSession)
                 {
-                    ((IHasTradingSession)ChosenTimeInForce).Session = value;
+                    ((IHasTradingSession) ChosenTimeInForce).Session = value;
                 }
             }
         }
+
         public DateTime ChosenExperieDate
         {
             set
             {
                 if (ChosenTimeInForce != null && ChosenTimeInForce is IHasExpireDate)
                 {
-
                     ((IHasExpireDate) ChosenTimeInForce).ExpireDate = value;
                 }
             }
@@ -231,8 +268,7 @@ namespace TraderClientTelerikWpfApp.OrderEntry.ViewModel
             set
             {
                 _priceVisible = value;
-                this.PropertyChanged.Notify(() => this.IsPriceVisible);
-
+                PropertyChanged.Notify(() => IsPriceVisible);
             }
         }
 
@@ -242,16 +278,20 @@ namespace TraderClientTelerikWpfApp.OrderEntry.ViewModel
             set
             {
                 _isYieldVisible = value;
-                this.PropertyChanged.Notify(() => this.IsYieldVisible);
+                PropertyChanged.Notify(() => IsYieldVisible);
             }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        public void Init(IInstrumetRepository instrumetRepository)
+        {
+            _instrumetRepository = instrumetRepository;
+        }
+
 
         private void SetVisiblityPriceAndYield()
         {
-
             if (_chosenOrderType.IsLimit)
             {
                 if (_chosenInstrument.IsQuatedOnPrice)
