@@ -42,6 +42,10 @@
     <Compile Include="Model\Instrument.cs" />
     <Compile Include="Model\OrderRequest.cs" />
     <Compile Include="Model\OrderType.cs" />
+    <Compile Include="Model\TimeInForce\IHasExpireDate.cs" />
+    <Compile Include="Model\TimeInForce\IHasTradingSession.cs" />
+    <Compile Include="Model\TimeInForce\TimeInForce.cs" />
+    <Compile Include="Model\TimeInForce\TradingSession.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

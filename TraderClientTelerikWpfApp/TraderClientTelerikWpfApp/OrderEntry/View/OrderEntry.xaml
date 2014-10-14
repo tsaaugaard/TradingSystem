@@ -5,7 +5,7 @@
         xmlns:local="clr-namespace:TraderClientTelerikWpfApp.OrderEntry.ViewModel"
         xmlns:converters="clr-namespace:TraderClientTelerikWpfApp.OrderEntry.Converters"
 
-        Title="Order Entry Bid" Height="400" Width="700">
+        Title="Order Entry Bid" Height="700" Width="700">
 
     <Window.Resources>
         <local:OrderEntryViewModel x:Key ="OrderEntryViewModel" />
@@ -49,15 +49,16 @@
                        HorizontalAlignment="Right" />
             </Grid>
         </DataTemplate>
-        <DataTemplate x:Key="OrderTypeCustomTemplate">
-            <Grid Margin="5,5,5,5"
-               Width="200">
+
+        <DataTemplate x:Key="SimpleDropdownCustomTemplate">
+            <Grid Margin="10,5,5,5"
+               HorizontalAlignment="Stretch">
                 <TextBlock Grid.Row="1"
                        Foreground="Blue"
                        Grid.Column="1"
-                       Margin ="10,5,5,5"
                        Text="{Binding Name}"
-                       HorizontalAlignment="Left" />
+                       Margin="10"
+                       HorizontalAlignment="Stretch"/>
             </Grid>
         </DataTemplate>
           
@@ -65,47 +66,56 @@
     </Window.Resources>
 
     
-    <Grid Height="350" Width ="700">
+    <Grid Height="600" Width ="700">
         <StackPanel>
-            <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Height="300">
-                <telerik:RadTileView>
-                    <telerik:RadTileViewItem Header = "Basic Order Data" TileState="Maximized">
-                        <StackPanel>
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Height="500" Width="700" >
+                <telerik:RadTileView MinimizedColumnWidth="200"   MinimizedRowHeight="150" >
+                    
+                    <telerik:RadTileViewItem Header = "Basic Order Data" TileState="Maximized" x:Name="BasicOrderDataTileViewItem" MaxHeight="500" MaxWidth="500" RestoredWidth="100" RestoredHeight="100"  >
+                        <StackPanel Width="500" x:Name="BasicOrderDataStackPanel">
                             <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="100"/>
-                                    <ColumnDefinition />
+                                <Grid.ColumnDefinitions >
+                                    <ColumnDefinition Width="150"/>
+                                    <ColumnDefinition Width="300"/>
                                 </Grid.ColumnDefinitions>
-                                <Label x:Name="lblInstrument" >Instrument</Label>
+                                <Label x:Name="lblInstrument" Margin="10" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch" >Instrument</Label>
                                 <telerik:RadComboBox Grid.Column="1"
                                 x:Name="InstrumentPicker"
                                 ItemsSource = "{Binding Path=Instruments}"
-                                ItemTemplate ="{StaticResource InstrumentCustomTemplate}" Margin="10"  Width="225" SelectedItem="{Binding Path=ChosenInstrument}"/>
+                                ItemTemplate ="{StaticResource InstrumentCustomTemplate}" 
+                                                     Margin="10" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch"
+                                                     SelectedItem="{Binding Path=ChosenInstrument}"/>
                             </Grid>
                             <Grid>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="100"/>
-                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="150"/>
+                                    <ColumnDefinition Width="300"/>
                                 </Grid.ColumnDefinitions>
-                                <Label x:Name="lblType" >Order Type</Label>
+                                <Label x:Name="lblType"  Margin="10" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch">Order Type</Label>
                                 <telerik:RadComboBox Grid.Column="1" 
                                  x:Name="OrderTypesPicker"
                                  ItemsSource ="{Binding Source={StaticResource OrderEntryViewModel}, Path=OrderTypes}" 
-                                 ItemTemplate ="{StaticResource OrderTypeCustomTemplate}" Margin="10"  Width="225"  SelectedItem="{Binding Path=ChosenOrderType}" 
+                                 ItemTemplate ="{StaticResource SimpleDropdownCustomTemplate}"  SelectedItem="{Binding Path=ChosenOrderType}" 
+                                 Margin="10"  HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch"
                                  />
                             </Grid>
                             <Grid>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="100"/>
-                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="150"/>
+                                    <ColumnDefinition Width="300"/>
                                 </Grid.ColumnDefinitions>
-                                <Label x:Name="lblYield" Grid.Column="0" Visibility="{Binding Path= IsYieldVisible, Converter={StaticResource BoolToVisibilityConverter}}" IsVisibleChanged="Input_OnIsVisibleChanged" >Yield</Label>
+                                <Label x:Name="lblYield" 
+                                       Grid.Column="0" 
+                                       Visibility="{Binding Path= IsYieldVisible, Converter={StaticResource BoolToVisibilityConverter}}" 
+                                       IsVisibleChanged="Input_OnIsVisibleChanged" 
+                                        Margin="10" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch"
+                                       >Yield</Label>
                                 <telerik:RadMaskedNumericInput  
                                                 
                                                 Grid.Column="1" 
                                                 x:Name="YieldInput"
-                                                Width="225"
-                                                Margin="20 20 20 10"
+                                                
+                                                
                                                 Culture="da-Dk"
                                                 EmptyContent="Enter Yield"
                                                 InputBehavior="Insert"
@@ -113,7 +123,7 @@
                                                 SelectionOnFocus="SelectAll"
                                                 TextMode="PlainText"
                                                 UpdateValueEvent="LostFocus"
-                                                HorizontalAlignment="Center"
+                                                Margin="10"  HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch" 
                                                 Value ="{Binding Path=Price  ,  Mode=TwoWay}"
                                                 Visibility="{Binding Path= IsYieldVisible, Converter={StaticResource BoolToVisibilityConverter}}"
                                                 IsVisibleChanged="Input_OnIsVisibleChanged"
@@ -121,13 +131,14 @@
                             </Grid>
                             <Grid>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="100"/>
-                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="150"/>
+                                    <ColumnDefinition Width="300"/>
                                 </Grid.ColumnDefinitions>
-                                <Label x:Name="lblPrice" Grid.Column="0"  Visibility="{Binding Path= IsPriceVisible, Converter={StaticResource BoolToVisibilityConverter}}" IsVisibleChanged="Input_OnIsVisibleChanged" >Price</Label>
+                                <Label x:Name="lblPrice" Grid.Column="0"  Visibility="{Binding Path= IsPriceVisible, Converter={StaticResource BoolToVisibilityConverter}}" IsVisibleChanged="Input_OnIsVisibleChanged"
+                                        Margin="10" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch"
+                                       >Price</Label>
                                 <telerik:RadMaskedNumericInput  Grid.Column="1" x:Name="PriceInput"
-                                                Width="225"
-                                                Margin="20 20 20 10"
+                                                
                                                 Culture="da-Dk"
                                                 EmptyContent="Enter Price"
                                                 InputBehavior="Insert"
@@ -135,29 +146,134 @@
                                                 SelectionOnFocus="SelectAll"
                                                 TextMode="PlainText"
                                                 UpdateValueEvent="LostFocus"
-                                                HorizontalAlignment="Center"
                                                 Value ="{Binding Path=Price  ,  Mode=TwoWay}" 
                                                 Visibility="{Binding Path= IsPriceVisible, Converter={StaticResource BoolToVisibilityConverter}}"
                                                 IsVisibleChanged="Input_OnIsVisibleChanged"
+                                                Margin="10"  HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch" 
                                                 
                                                 />
                             </Grid>
                             <Grid>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="100"/>
-                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="150"/>
+                                    <ColumnDefinition Width="300"/>
                                 </Grid.ColumnDefinitions>
-                                <Label x:Name="lblVolume" Content="Volume" Grid.Column="0"/>
-                                <telerik:RadMaskedNumericInput Value ="{Binding Path=Volume  ,  Mode=TwoWay}"  x:Name="VolumneInput" Margin="10" Culture="da-DK" EmptyContent="Enter Volume" SelectionOnFocus="SelectAll" InputBehavior="Insert" Mask="#9" FormatString="n0" TextMode="PlainText" UpdateValueEvent="LostFocus" Width="225" HorizontalAlignment="Center" Grid.Column="1" ></telerik:RadMaskedNumericInput>
+                                <Label x:Name="lblVolume" 
+                                       Content="Volume" 
+                                       Grid.Column="0"
+                                       Margin="10" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                                <telerik:RadMaskedNumericInput Value ="{Binding Path=Volume  ,  Mode=TwoWay}"  x:Name="VolumneInput" 
+                                                               Margin="10"  HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch" 
+                                                               Culture="da-DK" EmptyContent="Enter Volume" SelectionOnFocus="SelectAll" InputBehavior="Insert" Mask="#9" FormatString="n0" TextMode="PlainText" UpdateValueEvent="LostFocus" Grid.Column="1" ></telerik:RadMaskedNumericInput>
                             </Grid>
                         </StackPanel>
-                    </telerik:RadTileViewItem>
-                 <telerik:RadTileViewItem Header="Order Instructions" />
-                <telerik:RadTileViewItem Header="Other"/>
+                    </telerik:RadTileViewItem >
+                   
+                    <telerik:RadTileViewItem Header="Triggering Instructions"  TileState="Minimized"/>
 
+
+                    <telerik:RadTileViewItem  Header="Validity and Capacity" TileState="Minimized"  >
+                       
+                        <StackPanel>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="150"/>
+                                    <ColumnDefinition Width="300"/>
+                                </Grid.ColumnDefinitions>
+                                <Label x:Name="lblTimeInForce" HorizontalContentAlignment="Stretch" Margin="10">Time in Force</Label>
+                                <telerik:RadComboBox Grid.Column="1"
+                                x:Name="TimeInForcePicker"
+                                ItemsSource = "{Binding Path=TimeInForces}"
+                                ItemTemplate ="{StaticResource SimpleDropdownCustomTemplate}"   SelectedItem="{Binding Path=ChosenTimeInForce}" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Margin="10" />
+                            </Grid>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="150"/>
+                                    <ColumnDefinition Width="300" />
+                                </Grid.ColumnDefinitions>
+                                <Label x:Name="lblExpireDate" 
+                                 HorizontalContentAlignment="Stretch" 
+                                 Margin="10"
+                                 Visibility="{Binding Path= IsExpireDateVisible, Converter={StaticResource BoolToVisibilityConverter}}"
+                                 IsVisibleChanged="Input_OnIsVisibleChanged"
+                                       >ExpireDate</Label>
+                                <telerik:RadCalendar x:Name="TimeInForceDatePicker" 
+                                 Grid.Column="1"  
+                                 HorizontalAlignment="Stretch" 
+                                 HorizontalContentAlignment="Stretch" 
+                                 Margin="10"
+                                 Visibility="{Binding Path= IsExpireDateVisible, Converter={StaticResource BoolToVisibilityConverter}}"
+                                 IsVisibleChanged="Input_OnIsVisibleChanged"
+                                 DisplayDate="{Binding Path= ExperieDate}"
+                                 SelectionChanged="TimeInForceDatePicker_OnSelectionChanged"
+                                 SelectionMode="Single"
+                                 SelectedDate="{Binding Path = ChosenExperieDate}"
+                                 
+                                 />
+                            </Grid>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="150"/>
+                                    <ColumnDefinition Width="300"/>
+                                </Grid.ColumnDefinitions>
+                                <Label x:Name="TradingSession" Grid.Column="0" HorizontalContentAlignment="Stretch" Margin="10"
+                                    Visibility="{Binding Path= IsTradingSessionVisible, Converter={StaticResource BoolToVisibilityConverter}}"
+                                    IsVisibleChanged="Input_OnIsVisibleChanged"
+                                    >Trading Session</Label>
+                                <telerik:RadComboBox Grid.Column="1"
+                                    x:Name="TradingSessionPicker"
+                                    ItemsSource = "{Binding Path=TradingSessions}"
+                                    ItemTemplate ="{StaticResource SimpleDropdownCustomTemplate}"   SelectedItem="{Binding Path=ChosenTradingSession}" 
+                                    Visibility="{Binding Path= IsTradingSessionVisible, Converter={StaticResource BoolToVisibilityConverter}}"
+                                    IsVisibleChanged="Input_OnIsVisibleChanged"                    
+                                    HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Margin="10"/>
+
+                            </Grid>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="150"/>
+                                    <ColumnDefinition Width="300"/>
+                                </Grid.ColumnDefinitions>
+                                <Label x:Name="OrderCapacity" Grid.Column="0" HorizontalContentAlignment="Stretch" Margin="10" >Order Capacity</Label>
+
+                                <telerik:RadComboBox Grid.Column="1"
+                                x:Name="OrderCapacityPicker"
+                                ItemsSource = "{Binding Path=Sessions}"
+                                ItemTemplate ="{StaticResource SimpleDropdownCustomTemplate}" SelectedItem="{Binding Path=ChosenOrderCapacity}"  HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Margin="10"/>
+                            </Grid>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="150"/>
+                                    <ColumnDefinition Width="300" />
+                                </Grid.ColumnDefinitions>
+                                <Label x:Name="OrderRestriction" Grid.Column="0" HorizontalContentAlignment="Stretch" Margin="10" >Order Restriction</Label>
+
+                                <telerik:RadComboBox Grid.Column="1"
+                                x:Name="OrderRestrictionPicker"
+                                ItemsSource = "{Binding Path=Sessions}"
+                                ItemTemplate ="{StaticResource SimpleDropdownCustomTemplate}" SelectedItem="{Binding Path=ChosenOrderRestriction}"  HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Margin="10"/>
+                            </Grid>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="150"/>
+                                    <ColumnDefinition Width="300"/>
+                                </Grid.ColumnDefinitions>
+                                <Label x:Name="lblMatchIncrement" Grid.Column="0" HorizontalContentAlignment="Stretch" Margin="10">Match Increment</Label>
+
+                                <telerik:RadMaskedNumericInput Grid.Column="1"
+                                x:Name="InputMatchIncrement"
+                                 Mask="#9" 
+                                 HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Margin="10"/>
+                            </Grid>
+                        </StackPanel>
+
+                    </telerik:RadTileViewItem>
+                        
+                        
+                        
                 </telerik:RadTileView>
                 </Grid>
-                <telerik:RadButton x:Name="ButtonOK" Height="26" Width="93" Click="ButtonOK_Click" Content="Submit" Margin="0,0,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Right" />
+                <telerik:RadButton x:Name="ButtonOK" Height="26"  Click="ButtonOK_Click" Content="Submit" VerticalAlignment="Bottom" Margin="10"  HorizontalAlignment="Stretch" />
         </StackPanel>
     </Grid>
 </Window>

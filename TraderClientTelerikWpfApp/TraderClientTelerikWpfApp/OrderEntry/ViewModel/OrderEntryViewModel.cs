@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using DomainModel.Model;
+using DomainModel.Model.TimeInForce;
 using Repositories.Repositories;
 using TraderClientTelerikWpfApp.OrderEntry.ViewModel.Extensions;
 
@@ -20,6 +21,9 @@ namespace TraderClientTelerikWpfApp.OrderEntry.ViewModel
         private Instrument _chosenInstrument = Instrument.GetNullObject();
         private OrderType _chosenOrderType = OrderType.GetNullObject();
         private IInstrumetRepository _instrumetRepository;
+        private ObservableCollection<TimeInForce> _timeInForces;
+        private TimeInForce _timeInForce;
+        private ObservableCollection<TradingSession> _tradingSessions;
 
         public OrderEntryViewModel()
         {
@@ -64,10 +68,109 @@ namespace TraderClientTelerikWpfApp.OrderEntry.ViewModel
             }
         }
 
+        public ObservableCollection<TimeInForce> TimeInForces
+        {
+            get
+            {
+                if (_timeInForces == null)
+                {
+                    _timeInForces = new ObservableCollection<TimeInForce>();
+                    _timeInForces.Add(new TimeInForceDay());
+                    _timeInForces.Add(new TimeInForceGTC());
+                    _timeInForces.Add(new TimeInForceGTD());
+                    _timeInForces.Add(new TimeInForceGTS());
+                    _timeInForces.Add(new TimeInForceIOC());
+                }
+                return _timeInForces;
+            }
+        }
+
+        public ObservableCollection<TradingSession> TradingSessions
+        {
+            get
+            {
+                if (_tradingSessions == null)
+                {
+                    _tradingSessions = new ObservableCollection<TradingSession>();
+                    _tradingSessions.Add(new TradingSession(TradingSession.SessionTypeEnum.Auction));
+                    _tradingSessions.Add(new TradingSession(TradingSession.SessionTypeEnum.ContinuesTradingPeriod));
+                }
+
+                return _tradingSessions;
+            }
+        }
+
+        /// <summary>
+        /// property of chosen time in force - might change visibility of ExpireDate. (time in force has 0..1 expiredate) 
+        /// </summary>
+        public TimeInForce ChosenTimeInForce
+        {
+            get { return _timeInForce; }
+            set
+            {
+                _timeInForce = value; 
+                this.PropertyChanged.Notify(()=> this.IsExpireDateVisible);
+                this.PropertyChanged.Notify(()=> this.IsTradingSessionVisible);
+            }
+        }
+
+        public bool IsTradingSessionVisible
+        {
+            get
+            {
+                if (ChosenTimeInForce == null)
+                {
+                    return false;
+                }
+                if (ChosenTimeInForce is IHasTradingSession)
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
+
+        public bool IsExpireDateVisible
+        {
+            get
+            {
+                if (ChosenTimeInForce == null)
+                {
+                    return false;
+                }
+                if (ChosenTimeInForce is IHasExpireDate)
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
+
+        public TradingSession ChosenTradingSession 
+        {
+            set
+            {
+                if (ChosenTimeInForce != null && ChosenTimeInForce is IHasTradingSession)
+                {
+                    ((IHasTradingSession)ChosenTimeInForce).Session = value;
+                }
+            }
+        }
+        public DateTime ChosenExperieDate
+        {
+            set
+            {
+                if (ChosenTimeInForce != null && ChosenTimeInForce is IHasExpireDate)
+                {
+
+                    ((IHasExpireDate) ChosenTimeInForce).ExpireDate = value;
+                }
+            }
+        }
+
 
         public Instrument ChosenInstrument
         {
-
             set
             {
                 _chosenInstrument = value;
