@@ -27,10 +27,9 @@ Dependencies : Telerik WPF Controls
 Runs on Windows 8.
 
 Purpose:
-This is realy a Resume Driven Design Project - (hey its my own time spend so no harm done :-))
-Hopefully it shows that I (as a full stack developer) can...
-- be proficient in domain driven design approach.
-- be proficient in clean code: 
+This is a reference projet which should show the following:
+- domain driven design approach.
+- clean code: 
 - - use principle of least surprises: - if a ui-element is not relevant it should not be shown to the user.
 - - The same goes for the model and communication layers.
 - use of the following technoligies and methods : 
