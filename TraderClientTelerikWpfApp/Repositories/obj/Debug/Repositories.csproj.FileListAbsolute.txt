@@ -5,3 +5,10 @@ C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\Re
 C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\Repositories\bin\Debug\Model.pdb
 C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\Repositories\obj\Debug\Repositories.dll
 C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\Repositories\obj\Debug\Repositories.pdb
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\Repositories\bin\Debug\Repositories.dll
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\Repositories\bin\Debug\Repositories.pdb
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\Repositories\bin\Debug\Model.dll
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\Repositories\bin\Debug\Model.pdb
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\Repositories\obj\Debug\Repositories.csprojResolveAssemblyReference.cache
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\Repositories\obj\Debug\Repositories.dll
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\Repositories\obj\Debug\Repositories.pdb

@@ -7,3 +7,12 @@ C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\Fa
 C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\FakeRepositories\obj\Debug\FakeRepositories.csprojResolveAssemblyReference.cache
 C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\FakeRepositories\obj\Debug\FakeRepositories.dll
 C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\FakeRepositories\obj\Debug\FakeRepositories.pdb
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\FakeRepositories\bin\Debug\FakeRepositories.dll
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\FakeRepositories\bin\Debug\FakeRepositories.pdb
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\FakeRepositories\bin\Debug\Model.dll
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\FakeRepositories\bin\Debug\Repositories.dll
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\FakeRepositories\bin\Debug\Model.pdb
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\FakeRepositories\bin\Debug\Repositories.pdb
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\FakeRepositories\obj\Debug\FakeRepositories.csprojResolveAssemblyReference.cache
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\FakeRepositories\obj\Debug\FakeRepositories.dll
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\FakeRepositories\obj\Debug\FakeRepositories.pdb

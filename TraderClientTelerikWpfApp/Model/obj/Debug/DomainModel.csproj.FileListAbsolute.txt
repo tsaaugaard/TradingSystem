@@ -2,3 +2,7 @@ C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\Mo
 C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\Model\bin\Debug\Model.pdb
 C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\Model\obj\Debug\Model.dll
 C:\dropbox\Dropbox\code\Trading System\OrderHandler\TraderClientTelerikWpfApp\Model\obj\Debug\Model.pdb
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\Model\bin\Debug\Model.dll
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\Model\bin\Debug\Model.pdb
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\Model\obj\Debug\Model.dll
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\Model\obj\Debug\Model.pdb

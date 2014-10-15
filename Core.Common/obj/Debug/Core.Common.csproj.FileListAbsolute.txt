@@ -1,0 +1,10 @@
+C:\Users\Thomas\Documents\GitHub\TradingSystem\Core\bin\Debug\Core.Common.dll
+C:\Users\Thomas\Documents\GitHub\TradingSystem\Core\bin\Debug\Core.Common.pdb
+C:\Users\Thomas\Documents\GitHub\TradingSystem\Core\obj\Debug\Core.Common.csprojResolveAssemblyReference.cache
+C:\Users\Thomas\Documents\GitHub\TradingSystem\Core\obj\Debug\Core.Common.dll
+C:\Users\Thomas\Documents\GitHub\TradingSystem\Core\obj\Debug\Core.Common.pdb
+C:\Users\Thomas\Documents\GitHub\TradingSystem\Core.Common\bin\Debug\Core.Common.dll
+C:\Users\Thomas\Documents\GitHub\TradingSystem\Core.Common\bin\Debug\Core.Common.pdb
+C:\Users\Thomas\Documents\GitHub\TradingSystem\Core.Common\obj\Debug\Core.Common.csprojResolveAssemblyReference.cache
+C:\Users\Thomas\Documents\GitHub\TradingSystem\Core.Common\obj\Debug\Core.Common.dll
+C:\Users\Thomas\Documents\GitHub\TradingSystem\Core.Common\obj\Debug\Core.Common.pdb

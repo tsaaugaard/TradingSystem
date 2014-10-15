@@ -1,0 +1,9 @@
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TradingSystem.Business.Entities\TradingSystem.Business.Entities\bin\Debug\TradingSystem.Business.Entities.dll
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TradingSystem.Business.Entities\TradingSystem.Business.Entities\bin\Debug\TradingSystem.Business.Entities.pdb
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TradingSystem.Business.Entities\TradingSystem.Business.Entities\obj\Debug\TradingSystem.Business.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TradingSystem.Business.Entities\TradingSystem.Business.Entities\obj\Debug\TradingSystem.Business.Entities.dll
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TradingSystem.Business.Entities\TradingSystem.Business.Entities\obj\Debug\TradingSystem.Business.Entities.pdb
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TradingSystem.Business.Entities\TradingSystem.Business.Entities\bin\Debug\Core.Common.Contracts.dll
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TradingSystem.Business.Entities\TradingSystem.Business.Entities\bin\Debug\Core.Common.dll
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TradingSystem.Business.Entities\TradingSystem.Business.Entities\bin\Debug\Core.Common.Contracts.pdb
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TradingSystem.Business.Entities\TradingSystem.Business.Entities\bin\Debug\Core.Common.pdb
