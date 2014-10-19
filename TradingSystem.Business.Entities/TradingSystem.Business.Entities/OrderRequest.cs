@@ -6,14 +6,15 @@ using System.Text;
 using System.Threading.Tasks;
 using Core.Common.Contracts;
 using Core.Common.Core;
+using Core.Common;
 
 namespace TradingSystem.Business.Entities
 {
     [DataContract]
-    public class OrderRequest : EntityBase, IIdentifiableEntity
+    public class OrderRequest : EntityBase, IIdentifiableEntity, IAccountOwnedEntity
     {
         [DataMember]
-        int OrderRequestId { get; set; }
+        public int OrderRequestId { get; set; }
 
         [DataMember]
         public double Volume { get; set; }
@@ -36,8 +37,6 @@ namespace TradingSystem.Business.Entities
         [DataMember]
         public int TimeInForceId { get; set; }
 
-        [DataMember]
-        public int TradingSessionId { get; set; }
 
         [DataMember]
         public int OrderRestrictionId { get; set; }
@@ -45,11 +44,22 @@ namespace TradingSystem.Business.Entities
         [DataMember]
         public int EchangeOrderId { get; set; }
 
+        [DataMember]
+        public int AccountId { get; set; }
 
+        [DataMember]
         public int EntityId
         {
             get { return OrderRequestId; }
             set { OrderRequestId = value; }
         }
+        [DataMember]
+        public int OwnerAccountId
+        {
+            get { return AccountId; } 
+        }
+
+
+
     }
 }

@@ -19,3 +19,9 @@ C:\Users\Thomas\Documents\GitHub\TradingSystem\TradingSystem.Client.Entities\bin
 C:\Users\Thomas\Documents\GitHub\TradingSystem\TradingSystem.Client.Entities\obj\Debug\TradingSystem.Client.Entities.csprojResolveAssemblyReference.cache
 C:\Users\Thomas\Documents\GitHub\TradingSystem\TradingSystem.Client.Entities\obj\Debug\TradingSystem.Client.Entities.dll
 C:\Users\Thomas\Documents\GitHub\TradingSystem\TradingSystem.Client.Entities\obj\Debug\TradingSystem.Client.Entities.pdb
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TradingSystem.Client.Entities\bin\Debug\Core.Common.Contracts.dll
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TradingSystem.Client.Entities\bin\Debug\Core.Common.dll
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TradingSystem.Client.Entities\bin\Debug\Core.Common.Contracts.pdb
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TradingSystem.Client.Entities\bin\Debug\Core.Common.pdb
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TradingSystem.Client.Entities\bin\Debug\EntityFramework.dll
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TradingSystem.Client.Entities\bin\Debug\EntityFramework.xml

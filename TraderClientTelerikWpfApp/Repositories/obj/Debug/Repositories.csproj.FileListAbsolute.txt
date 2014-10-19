@@ -12,3 +12,13 @@ C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\Reposit
 C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\Repositories\obj\Debug\Repositories.csprojResolveAssemblyReference.cache
 C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\Repositories\obj\Debug\Repositories.dll
 C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\Repositories\obj\Debug\Repositories.pdb
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\Repositories\bin\Debug\System.Composition.AttributedModel.dll
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\Repositories\bin\Debug\System.Composition.Convention.dll
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\Repositories\bin\Debug\System.Composition.Hosting.dll
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\Repositories\bin\Debug\System.Composition.Runtime.dll
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\Repositories\bin\Debug\System.Composition.TypedParts.dll
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\Repositories\bin\Debug\System.Composition.AttributedModel.xml
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\Repositories\bin\Debug\System.Composition.Convention.xml
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\Repositories\bin\Debug\System.Composition.Hosting.xml
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\Repositories\bin\Debug\System.Composition.Runtime.xml
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\Repositories\bin\Debug\System.Composition.TypedParts.xml

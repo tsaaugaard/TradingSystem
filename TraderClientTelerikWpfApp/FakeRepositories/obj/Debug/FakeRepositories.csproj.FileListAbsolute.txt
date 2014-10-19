@@ -16,3 +16,13 @@ C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\FakeRep
 C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\FakeRepositories\obj\Debug\FakeRepositories.csprojResolveAssemblyReference.cache
 C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\FakeRepositories\obj\Debug\FakeRepositories.dll
 C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\FakeRepositories\obj\Debug\FakeRepositories.pdb
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\FakeRepositories\bin\Debug\System.Composition.AttributedModel.dll
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\FakeRepositories\bin\Debug\System.Composition.Convention.dll
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\FakeRepositories\bin\Debug\System.Composition.Hosting.dll
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\FakeRepositories\bin\Debug\System.Composition.Runtime.dll
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\FakeRepositories\bin\Debug\System.Composition.TypedParts.dll
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\FakeRepositories\bin\Debug\System.Composition.AttributedModel.xml
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\FakeRepositories\bin\Debug\System.Composition.Convention.xml
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\FakeRepositories\bin\Debug\System.Composition.Hosting.xml
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\FakeRepositories\bin\Debug\System.Composition.Runtime.xml
+C:\Users\Thomas\Documents\GitHub\TradingSystem\TraderClientTelerikWpfApp\FakeRepositories\bin\Debug\System.Composition.TypedParts.xml

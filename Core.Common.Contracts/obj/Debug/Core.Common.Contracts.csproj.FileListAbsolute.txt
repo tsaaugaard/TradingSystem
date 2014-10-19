@@ -1,5 +1,4 @@
 C:\Users\Thomas\Documents\GitHub\TradingSystem\Core.Common.Contracts\bin\Debug\Core.Common.Contracts.dll
 C:\Users\Thomas\Documents\GitHub\TradingSystem\Core.Common.Contracts\bin\Debug\Core.Common.Contracts.pdb
-C:\Users\Thomas\Documents\GitHub\TradingSystem\Core.Common.Contracts\obj\Debug\Core.Common.Contracts.csprojResolveAssemblyReference.cache
 C:\Users\Thomas\Documents\GitHub\TradingSystem\Core.Common.Contracts\obj\Debug\Core.Common.Contracts.dll
 C:\Users\Thomas\Documents\GitHub\TradingSystem\Core.Common.Contracts\obj\Debug\Core.Common.Contracts.pdb

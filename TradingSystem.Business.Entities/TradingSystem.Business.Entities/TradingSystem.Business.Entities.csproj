@@ -40,9 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Capacity\Capacity.cs" />
+    <Compile Include="Instrument.cs" />
+    <Compile Include="OrderType.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="OrderRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TimeInForce\IHasExpireDate.cs" />
+    <Compile Include="TimeInForce\IHasTradingSession.cs" />
+    <Compile Include="TimeInForce\TimeInForce.cs" />
+    <Compile Include="TimeInForce\TradingSession.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core.Common.Contracts\Core.Common.Contracts.csproj">

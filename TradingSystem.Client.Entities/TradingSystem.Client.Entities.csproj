@@ -43,12 +43,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Capacity\Capacity.cs" />
+    <Compile Include="Instrument.cs" />
     <Compile Include="OrderRequest.cs" />
+    <Compile Include="OrderType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TimeInForce\IHasExpireDate.cs" />
+    <Compile Include="TimeInForce\IHasTradingSession.cs" />
+    <Compile Include="TimeInForce\TimeInForce.cs" />
+    <Compile Include="TimeInForce\TradingSession.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core.Common.Contracts\Core.Common.Contracts.csproj">
+      <Project>{531cf1c3-8035-415f-9a6b-ac645a02afef}</Project>
+      <Name>Core.Common.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Common\Core.Common.csproj">
+      <Project>{0bad0b12-cd6e-4373-98c6-dce7c18f1729}</Project>
+      <Name>Core.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
