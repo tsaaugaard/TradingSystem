@@ -2,6 +2,7 @@
 {
     public class Instrument
     {
+
         public string InstrumentID { get; set; }
         public string Symbol { get; set; }
         public string Name { get; set; }
@@ -17,7 +18,6 @@
         {
             get { return (QuotedIn == QuotedInEnum.Yield); }
         }
-
 
         public enum QuotedInEnum
         {
